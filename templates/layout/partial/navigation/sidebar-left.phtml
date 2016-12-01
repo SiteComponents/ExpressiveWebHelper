@@ -1,0 +1,25 @@
+<?php    
+    $current_position = 'Chancellor'; // get position
+    $allowed_position = ['Chancellor', 'Cost Center Head', 'Human Resource Staff'];
+?>
+
+<div id="photo">
+    <h4>Welcome, <?php echo "Hello, USER FIRST NAME";?>!</h4>
+    <img src="/assets/academe/images/default.jpg" alt="My Photo" style="margin-bottom: 3px;">
+</div>
+<div id="systems">
+    <h4>Leave Applications</h4>
+    <!-- Print number of pending requests -->
+    <?php if (in_array($current_position, $allowed_position)) : ?>
+    <p style="text-align:center;"><a href="#"> Leave Pending</a></p>    
+    <?php else : ?>
+        <p style="text-align:center;"><a href="#"> # Pending</a></p>
+    <?php endif; ?>
+
+</div>
+<div id="upload">
+	<h4>Upload</h4>
+	<p style="font-size:11px; margin:0 10px 6px 10px;" class="center">
+        <a href="#">Upload</a>
+    your photo.</p>
+</div>

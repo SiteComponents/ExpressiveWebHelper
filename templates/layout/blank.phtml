@@ -1,0 +1,42 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php 
+            echo $this->headMeta()
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+                ->appendName('viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
+            
+            echo $this->headTitle('LMS')
+                ->setSeparator(' &raquo; ')
+                ->setAutoEscape(false);
+        
+            echo $this->headLink(['rel' => 'shortcut icon', 'href' => '/assets/academe/images/favicon.ico'])
+                ->prependStylesheet('/assets/academe/css/style.css')
+                ->prependStylesheet('/assets/font-awesome/css/font-awesome.css')
+                ->prependStylesheet('/assets/bootstrap/css/bootstrap.min.css');
+        ?>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <?php echo $this->partial('partial/navigation/header'); ?>
+            </div>            
+            <div class="container" style="margin: 20px 20px;">
+                <div class="center"> <?php echo $this->content;?> </div>
+            </div>
+            <div id="footer">
+                <?php echo $this->partial('template/footer'); ?>
+            </div>
+        </div>
+        <?php 
+            echo $this->inlineScript() //prepend up here
+                ->prependFile('/assets/bootstrap/js/tab.js')
+                ->prependFile('/assets/bootstrap/js/tooltip.js')
+                ->prependFile('/assets/bootstrap/js/popover.js')
+                ->prependFile('/assets/bootstrap/js/bootstrap.min.js')
+                ->prependFile('/assets/jquery-ui/jquery-ui.min.js')
+                ->prependFile('/assets/jquery/jquery.min.js');
+        ?>
+    </body>
+</html>

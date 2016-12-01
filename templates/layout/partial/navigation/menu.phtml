@@ -1,0 +1,27 @@
+<?php $url = parse_url($this->serverUrl(), PHP_URL_PATH); ?>
+
+<div id='menu'>
+    <ul>
+        <li <?php if ((0 === strcmp($url, '/')) || (0 === strcmp($url, '/user'))) echo 'class="active"'; ?>>
+            <a href="<?=$this->url('home')?>">Home</a>
+        </li>
+        <li <?php if (0 === strcmp($url, '/leave/card')) echo 'class="active"'; ?>>
+            <a href="<?php // echo $this->url('leave-card');?>">Leave Card</a>
+        </li>
+        <li <?php if (0 === strcmp($url, '/leave/manage')) echo 'class="active"'; ?>>
+            <a href="<?php // echo $this->url('leaves')?>">Manage Leave</a>
+        </li>
+        <li <?php if (0 === strcmp($url, '/reports')) echo 'class="active"'; ?>>
+            <a href="<?php // echo $this->url('leave-reports')?>">Reports</a>
+        </li>
+        <li <?php if (0 === strcmp($url, '/employees')) echo 'class="active"'; ?>>
+            <a href="<?php // echo $this->url('employees');?>">Employees</a>
+        </li>
+        <li <?php if (0 === strcmp($url, '/leave/logs')) echo 'class="active"'; ?>>
+            <a href="<?php // echo $this->url('leave-logs')?>">Logs</a>
+        </li>
+        <li>
+            <!--<a href="<?php // echo $this->url('logout')?>">Logout</a>-->
+        </li>
+    </ul>
+</div>
