@@ -45,17 +45,7 @@ final class ConfigProvider
             'layout'    => 'layout/layout',
             'map'       => [
                 'layout/layout'                     => $path . '/layout/default.phtml',
-                'layout/default'                    => $path . '/layout/default.phtml',
                 'layout/blank'                      => $path . '/layout/blank.phtml',
-                'template/footer'                   => $path . '/layout/partial/footer.phtml',
-                'template/navigation/sidebar'       => $path . '/layout/template/navigation/sidebar.phtml',
-                'template/navigation/header'        => $path . '/layout/template/navigation/header.phtml',
-                'template/navigation/breadcrumbs'   => $path . '/layout/template/navigation/breadcrumbs.phtml',
-                'partial/navigation/header'         => $path . '/layout/partial/navigation/header.phtml',
-                'partial/navigation/menu'           => $path . '/layout/partial/navigation/menu.phtml',
-                'partial/navigation/sidebar-left'   => $path . '/layout/partial/navigation/sidebar-left.phtml',
-                'partial/navigation/sidebar-right'  => $path . '/layout/partial/navigation/sidebar-right.phtml',
-                'partial/navigation/breadcrumbs'    => $path . '/layout/partial/navigation/breadcrumbs.phtml'
             ],
             'paths'     => [
                 'layout'    => [$path . '/layout']
