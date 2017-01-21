@@ -11,8 +11,7 @@
                 ->setSeparator(' &raquo; ')
                 ->setAutoEscape(false);
         
-            echo $this->headLink(['rel' => 'shortcut icon', 'href' => '/assets/academe/images/favicon.ico'])
-                ->prependStylesheet('/assets/academe/css/style.css')
+            echo $this->headLink(['rel' => 'shortcut icon', 'href' => '/favicon.ico'])
                 ->prependStylesheet('/assets/font-awesome/css/font-awesome.css')
                 ->prependStylesheet('/assets/bootstrap/css/bootstrap.min.css');
         ?>
@@ -22,8 +21,8 @@
             <div id="header">
                 <!-- header here -->
             </div>            
-            <div class="container" style="margin: 20px 20px;">
-                <div class="center"> <?php echo $this->content;?> </div>
+            <div class="container">
+                <?php echo $this->content; ?>
             </div>
             <div id="footer">
                 <!-- footer here -->
@@ -31,12 +30,7 @@
         </div>
         <?php 
             echo $this->inlineScript() //prepend up here
-                ->prependFile('/assets/bootstrap/js/tab.js')
-                ->prependFile('/assets/bootstrap/js/tooltip.js')
-                ->prependFile('/assets/bootstrap/js/popover.js')
-                ->prependFile('/assets/bootstrap/js/bootstrap.min.js')
-                ->prependFile('/assets/jquery-ui/jquery-ui.min.js')
-                ->prependFile('/assets/jquery/jquery.min.js');
+                ->prependFile('/assets/bootstrap/js/bootstrap.min.js');
         ?>
     </body>
 </html>

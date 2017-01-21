@@ -27,3 +27,4 @@ extras/documentation
 
 # Test Output
 build/
+phpunit.xml
