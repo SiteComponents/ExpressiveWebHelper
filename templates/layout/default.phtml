@@ -8,11 +8,10 @@
                 ->appendName('viewport', 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no');
             
             echo $this->headTitle()->setSeparator(' &raquo; ')->setAutoEscape(false);
-        
-            echo $this->headLink(['rel' => 'shortcut icon', 'href' => '/assets/academe/images/favicon.ico'])
-                ->prependStylesheet('/assets/academe/css/style.css')
+
+            echo $this->headLink(['rel' => 'shortcut icon', 'href' => '/favicon.ico'])
                 ->prependStylesheet('/assets/font-awesome/css/font-awesome.css')
-                ->prependStylesheet('/assets/bootstrap/css/bootstrap.min.css')
+                ->prependStylesheet('/assets/bootstrap/css/bootstrap.min.css');
         ?>
     </head>
     <body>
@@ -32,9 +31,7 @@
         </div>
         <?php 
             echo $this->inlineScript() //prepend up here
-                ->prependFile('assets/bootstrap/js/bootstrap.min.js')
-                ->prependFile('assets/jquery-ui/jquery-ui.min.js')
-                ->prependFile('assets/jquery/jquery.min.js');
+                ->prependFile('assets/bootstrap/js/bootstrap.min.js');
         ?>
     </body>
 </html>

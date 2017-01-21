@@ -5,19 +5,19 @@
     "authors": [
         {
             "name": "Gab Amba",
-            "homepage": "http://www.gabbydgab.com/",
-            "email": "gamba@gabbydgab.com"
+            "homepage": "http://www.gabbydgab.com/"
         }
     ],
     "require": {
-        "php": "^7.1",
-        "zendframework/zend-mvc": "^3.0",
-        "zendframework/zend-navigation": "^2.8"
+        "php": "^7.1.1",
+        "zendframework/zend-navigation": "^2.8",
+        "zendframework/zend-expressive-zendviewrenderer": "^1.2"
     },
     "require-dev": {                
-        "squizlabs/php_codesniffer": "^2.7.1",        
-        "sebastian/phpcpd": "^2.0.4",        
-        "phpunit/phpunit": "^5.7.2"
+        "zendframework/zend-coding-standard": "^1.0",   
+        "sebastian/phpcpd": "^2.0",        
+        "phpunit/phpunit": "^5.7",
+        "malukenho/docheader": "^0.1"
     },
     "autoload": {
         "psr-4": {
@@ -30,17 +30,16 @@
         }
     },
     "scripts": {
-        "post-update-cmd": [
-            "@debug"
-        ],
-        "debug": [
-            "@cs",
+        "check": [
+            "@license-check",
+            "@cs-check",
             "@cpd",
             "@test"
         ],
-        "cs": "phpcs --ignore=/vendor,/build src test",
-        "cs-fix": "phpcbf --ignore=/vendor,/build src test",
+        "cs-check": "phpcs --ignore=/vendor,/build",
+        "cs-fix": "phpcbf --ignore=/vendor,/build",
         "cpd": "phpcpd --exclude=/vendor,/build --fuzzy src test",
-        "test": "phpunit --verbose"
+        "license-check": "docheader check src/ test/",
+        "test": "phpunit --verbose --colors=always"
     }
 }
